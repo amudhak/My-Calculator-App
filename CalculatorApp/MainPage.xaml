@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.MainPage"
+             Title="Calculator"
+             BackgroundColor="DarkSeaGreen">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="MediumPurple"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="FontSize" Value="25"/>
+        </Style>
+
+    </ContentPage.Resources>
+
+    <Grid Margin="10" RowSpacing="2" ColumnSpacing="2"
+          RowDefinitions="2*,*,*,*,*,*"
+          ColumnDefinitions="*,*,*,*">
+
+        <Label x:Name="label1"
+               Grid.Row="0"
+               Grid.ColumnSpan="4"
+               BackgroundColor="DarkSeaGreen"
+               Text=""
+               Padding="10"
+               LineBreakMode="NoWrap"
+               VerticalTextAlignment="End"
+               HorizontalTextAlignment="End"
+               MaximumWidthRequest="10"
+               TextColor="White"
+               FontSize="75"/>
+
+        <Button Text="C" Grid.Row="1" Grid.ColumnSpan="2"
+                Clicked="OnClearClicked"/>
+        <Button Text="÷" Grid.Row="1" Grid.Column="2" FontSize="30"
+                Clicked="OnClicked"/>
+        <Button Text="x" Grid.Row="1" Grid.Column="3"
+                Clicked="OnClicked"/>
+
+        <Button Text="7" Grid.Row="2" Grid.Column="0"
+                Clicked="OnClicked"/>
+        <Button Text="8" Grid.Row="2" Grid.Column="1"
+                Clicked="OnClicked"/>
+        <Button Text="9" Grid.Row="2" Grid.Column="2"
+                Clicked="OnClicked"/>
+        <Button Text="-" Grid.Row="2" Grid.Column="3" FontSize="40"
+                Clicked="OnClicked"/>
+
+        <Button Text="4" Grid.Row="3" Grid.Column="0"
+                Clicked="OnClicked"/>
+        <Button Text="5" Grid.Row="3" Grid.Column="1"
+                Clicked="OnClicked"/>
+        <Button Text="6" Grid.Row="3" Grid.Column="2"
+                Clicked="OnClicked"/>
+        <Button Text="+" Grid.Row="3" Grid.Column="3"
+                Clicked="OnClicked"/>
+
+        <Button Text="1" Grid.Row="4" Grid.Column="0"
+                Clicked="OnClicked"/>
+        <Button Text="2" Grid.Row="4" Grid.Column="1"
+                Clicked="OnClicked"/>
+        <Button Text="3" Grid.Row="4" Grid.Column="2"
+                Clicked="OnClicked"/>
+        <Button Text="." Grid.Row="4" Grid.Column="3"
+                Clicked="OnClicked"/>
+
+        <Button Text="00" Grid.Row="5" Grid.Column="0"
+                Clicked="OnClicked"/>
+        <Button Text="0" Grid.Row="5" Grid.Column="1"
+                Clicked="OnClicked"/>
+        <Button Text="=" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"
+                Clicked="calculate"/>
+
+    </Grid>
+
+</ContentPage>
